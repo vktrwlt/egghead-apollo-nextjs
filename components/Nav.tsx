@@ -11,8 +11,8 @@ export default function Nav() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex ml-6 space-x-8">
-              <Link href="/">
-                <a className={navLinkStyle}> Home </a>
+              <Link href="/" className={navLinkStyle}>
+                Home
               </Link>
             </div>
           </div>
