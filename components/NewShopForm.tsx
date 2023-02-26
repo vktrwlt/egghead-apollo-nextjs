@@ -54,8 +54,6 @@ const NewShopForm = ({ accessToken }: { accessToken: string }) => {
       .catch((err) => {
         console.log(err);
       });
-
-    console.log(formData);
   };
 
   return (
