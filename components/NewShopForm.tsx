@@ -5,7 +5,7 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 import { httpLink, setAuthToken } from "../gqlClient";
 const CREATE_SHOP = gql`
   mutation CreateShop($name: String!, $description: String!, $coverImg: String!, $ownerID: String!) {
-    createShop(data: { name: $name, description: $description, coverImg: $coverImg, ownerID: $ownerID, products: [] }) {
+    createShop(data: { name: $name, description: $description, coverImg: $coverImg, ownerID: $ownerID }) {
       _id
       name
     }
