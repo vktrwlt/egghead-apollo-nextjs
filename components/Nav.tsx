@@ -36,16 +36,19 @@ export default function Nav() {
               </button>
             </Link>
             {!user ? (
-              <a href="/api/auth/login" className="px-2 py-3 ml-2 mr-2 bg-purple-100 border rounded-md">
+              <Link href="/api/auth/login" className="px-2 py-3 ml-2 mr-2 bg-purple-100 border rounded-md">
                 Login as Vendor
-              </a>
+              </Link>
             ) : (
               <>
                 <img src={user.picture ? user.picture : ""} className="w-8 h-8 ml-2 rounded-full" />
                 <span className="ml-2 mr-2">{user.name}</span>
-                <a href="/api/auth/logout" className="px-2 py-3 mr-2 bg-purple-100 border rounded-md">
+                <Link href="/manage-shops" className="px-2 py-3 mr-2 bg-purple-100 border rounded-md">
+                  Manage Shops
+                </Link>
+                <Link href="/api/auth/logout" className="px-2 py-3 mr-2 bg-purple-100 border rounded-md">
                   Logout
-                </a>
+                </Link>
               </>
             )}
           </div>

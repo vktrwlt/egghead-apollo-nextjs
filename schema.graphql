@@ -3,7 +3,7 @@ type Shop {
   description: String!
   coverImg: String!
   products: [Product]!
-  ownerId: String!
+  ownerID: String!
 }
 
 type Product {
