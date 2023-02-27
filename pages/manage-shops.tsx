@@ -24,7 +24,7 @@ export default function ManageShops(props: any) {
   return (
     <>
       <NewShopForm accessToken={props.accessToken} />
-      {data ? <ShopList shops={data.getShopsByOwnerID.data} /> : <div>Loading...</div>}
+      {data ? <ShopList shops={data.getShopsByOwnerID.data} accessToken={props.accessToken} /> : <div>Loading...</div>}
     </>
   );
 }
