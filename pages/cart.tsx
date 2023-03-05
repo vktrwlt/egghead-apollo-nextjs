@@ -51,8 +51,20 @@ export default function Cart() {
       <div className="mt-6">
         <div>Total $ {total}</div>
         <a
-          href="#"
-          className="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md"
+          onClick={() => {
+            fetch("http://localhost:3000/api/create-checkout-session", {
+              method: "POST",
+              body: JSON.stringify({
+                cart: cart,
+              }),
+            })
+              .then((response) => response.json())
+              .then((response) => {
+                console.log(response);
+                window.location.href = response.session.url;
+              });
+          }}
+          className="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md pointer"
         >
           Checkout
         </a>
